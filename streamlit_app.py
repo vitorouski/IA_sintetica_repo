@@ -2,8 +2,8 @@ import streamlit as st
 from openai import OpenAI
 import time
 
-client = OpenAI(api_key=["OPENAI_API_KEY"])
-assistant_id = ["ASSISTANT_ID"]
+client = OpenAI(api_key="OPENAI_API_KEY")
+assistant_id="ASSISTANT_ID"
 
 def ensure_single_thread_id():
     if "thread_id" not in st.session_state:
