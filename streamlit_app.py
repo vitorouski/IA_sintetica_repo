@@ -44,7 +44,7 @@ def stream_generator(prompt, thread_id):
     )
 
     # Start streaming the response
-    with st.spinner("Wait... Generating response..."):
+    with st.spinner("Espere... Generando respuesta..."):
         stream = client.beta.threads.runs.create(
             thread_id=thread_id,
             assistant_id=assistant_id,
@@ -76,8 +76,8 @@ def stream_generator(prompt, thread_id):
 # Streamlit interface
 st.set_page_config(page_icon="🧠")
 st.title("🧠 Síntesis Neural")
-st.subheader("Consulta cualquier cosa sobre los siguientes temas... la IA Sintética te responderá.")
-
+st.subheader("En iasintetica.com, estudiamos las bases de la inteligencia artificial (IA) y su relación con la inteligencia sintética (IS). La IA, basada en grandes bases de datos, selecciona respuestas comunes, pero también puede estar influenciada por intereses parciales o flujos de información sesgados. Por otro lado, la inteligencia sintética valora las respuestas según criterios como la simplicidad y la utilidad adaptativa. La inteligencia artificial sintética (IAS) busca generar respuestas auto-sintetizadas, pero aún depende de bases de conocimiento previas. La IA, a diferencia de la IS, se enfoca en lo más común, mientras que la IS prioriza respuestas más fundamentadas en principios sintéticos.
+Los contenidos y respuestas se encuentran en fase de experimentación. Por tanto, no nos responsabilizamos de las consecuencias que puedan comportar. Bajo estas premisas, intentaremos resolver tus dudas. ¿En que puedo ayudarte? Consulta cualquier cosa sobre los siguientes temas... la IA Sintética te responderá.")
 
 # Chat interface
 if "messages" not in st.session_state:
